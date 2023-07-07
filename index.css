@@ -1,0 +1,30 @@
+.buttons {
+align-content: center;
+position: relative;
+width: 100%;
+text-align: center;
+display: inline-block;
+padding: 0%;
+}
+.buttons li {
+    list-style: none;
+    margin: 0%;
+}
+.buttons button {
+    border-radius: 8px;
+    width: 50%;
+    margin: 10px;
+}
+.be-li-button {
+list-style: none;
+position: relative;
+justify-content: center;
+align-items: center;
+}
+.be-button {
+    color:white;
+    background-color: green;
+    border-radius: 8px;
+    width: 50%;
+    margin: 10px;
+}
