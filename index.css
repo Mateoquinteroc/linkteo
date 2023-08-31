@@ -1,14 +1,15 @@
 .buttons {
-align-content: center;
-position: relative;
-width: 100%;
-text-align: center;
-display: inline-block;
-padding: 0%;
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 0%;
+    bottom: 10%;
 }
 .buttons li {
     list-style: none;
-    margin: 0%;
+    margin:0%;
 }
 .buttons button {
     border-radius: 8px;
@@ -16,15 +17,79 @@ padding: 0%;
     margin: 10px;
 }
 .be-li-button {
-list-style: none;
-position: relative;
-justify-content: center;
-align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+   
+
 }
+
+.be-button:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background-color: #2980b9;
+    
+}
+
 .be-button {
+    align-items: center;
     color:white;
     background-color: green;
     border-radius: 8px;
     width: 50%;
-    margin: 10px;
+    transition: background-color 0.3s ease;
+    left: 0;
+    right: 0;
+}
+
+
+.be-li-button:hover::after {
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.be-button img {
+    width: 30px;
+    position: relative;
+    margin-right:0;
+    margin-top: 0;
+    left: 10%;
+    float: left;
+}
+
+.backg {
+    position:absolute;
+    background-image: url('./src/img/00001-4110583534.png');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        bottom: 5%; /* Ajusta la posición en dispositivos pequeños */
+    }
+
+    .buttons button {
+        width: 80%; /* Ajusta el ancho de los botones */
+    }
+    .be-button:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+        position: relative;
+        background-color: #2980b9;
+    }
+
+    .be-button {
+        width: 80%; /* Ajusta el ancho de los botones */
+    }
+    
+    .be-button img {
+        width: 20px; /* Ajusta el ancho de las imágenes */
+    }
 }
